@@ -67,8 +67,7 @@ const LandingPage = () => {
       title: 'useOptimistic',
       description: 'Implement optimistic updates for better UX',
       icon: <Zap className="h-6 w-6 text-yellow-500" />,
-      link: '/features/optimistic',
-      isComingSoon: true,
+      link: '/features/use-optimistic',
     },
     {
       title: 'Document Model',
