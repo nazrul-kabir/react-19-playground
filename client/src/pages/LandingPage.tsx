@@ -9,7 +9,7 @@ import {
   CardFooter,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Upload, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, Upload, Zap, Server } from 'lucide-react';
 
 interface FeatureCardProps {
   title: string;
@@ -70,11 +70,10 @@ const LandingPage = () => {
       link: '/features/use-optimistic',
     },
     {
-      title: 'Document Model',
-      description: 'Explore the new React 19 document model',
-      icon: <Sparkles className="h-6 w-6 text-purple-500" />,
-      link: '/features/document-model',
-      isComingSoon: true,
+      title: 'Server Component',
+      description: 'Render components ahead of time, before bundling',
+      icon: <Server className="h-6 w-6 text-purple-500" />,
+      link: '/features/server-component',
     },
   ];
 

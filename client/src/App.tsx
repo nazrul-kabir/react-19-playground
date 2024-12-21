@@ -8,6 +8,7 @@ import LandingPage from './pages/LandingPage';
 import UseHookDemo from './features/use-hooks/UseHooksDemo';
 import Layout from './components/Layout';
 import UseOptimisticDemo from './features/use-optimistic/UseOptimisticDemo';
+import ServerComponentsDemo from './features/server-component/ServerComponentsDemo';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="features">
             <Route path="use-hook" element={<UseHookDemo />} />
             <Route path="use-optimistic" element={<UseOptimisticDemo />} />
+            <Route path="server-component" element={<ServerComponentsDemo />} />
           </Route>
           {/* Catch all route */}
           <Route path="*" element={<Navigate to="/" replace />} />
