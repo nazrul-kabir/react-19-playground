@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 const Layout = () => {
   const location = useLocation();
@@ -24,10 +24,10 @@ const Layout = () => {
                 <Link
                   to="/"
                   className={cn(
-                    "px-3 py-2 rounded-md text-sm font-medium",
-                    isActive('/') 
-                      ? "bg-blue-50 text-blue-700" 
-                      : "text-gray-600 hover:text-gray-900"
+                    'px-3 py-2 rounded-md text-sm font-medium',
+                    isActive('/')
+                      ? 'bg-blue-50 text-blue-700'
+                      : 'text-gray-600 hover:text-gray-900'
                   )}
                 >
                   Home
@@ -35,10 +35,10 @@ const Layout = () => {
                 <Link
                   to="/features/use-hook"
                   className={cn(
-                    "px-3 py-2 rounded-md text-sm font-medium",
+                    'px-3 py-2 rounded-md text-sm font-medium',
                     isActive('/features/use-hook')
-                      ? "bg-blue-50 text-blue-700"
-                      : "text-gray-600 hover:text-gray-900"
+                      ? 'bg-blue-50 text-blue-700'
+                      : 'text-gray-600 hover:text-gray-900'
                   )}
                 >
                   use() Hook Demo

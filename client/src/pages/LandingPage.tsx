@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Upload, Sparkles, Zap } from 'lucide-react';
 
@@ -12,14 +19,16 @@ interface FeatureCardProps {
   isComingSoon?: boolean;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ 
-  title, 
-  description, 
-  icon, 
-  link, 
-  isComingSoon 
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  title,
+  description,
+  icon,
+  link,
+  isComingSoon,
 }) => (
-  <Card className={`hover:shadow-lg transition-shadow ${isComingSoon ? 'opacity-50' : ''}`}>
+  <Card
+    className={`hover:shadow-lg transition-shadow ${isComingSoon ? 'opacity-50' : ''}`}
+  >
     <CardHeader>
       <div className="flex items-center gap-2">
         {icon}
@@ -29,11 +38,9 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     </CardHeader>
     <CardContent>
       <div className="text-sm text-gray-600">
-        {isComingSoon ? (
-          'Coming soon - Stay tuned for this exciting feature!'
-        ) : (
-          'Explore this feature with interactive examples and detailed explanations.'
-        )}
+        {isComingSoon
+          ? 'Coming soon - Stay tuned for this exciting feature!'
+          : 'Explore this feature with interactive examples and detailed explanations.'}
       </div>
     </CardContent>
     <CardFooter>
@@ -51,25 +58,25 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 const LandingPage = () => {
   const features: FeatureCardProps[] = [
     {
-      title: "use() Hook",
-      description: "Simplify promise handling with the new use Hook",
+      title: 'use() Hook',
+      description: 'Simplify promise handling with the new use Hook',
       icon: <Upload className="h-6 w-6 text-blue-500" />,
-      link: "/features/use-hook"
+      link: '/features/use-hook',
     },
     {
-      title: "useOptimistic",
-      description: "Implement optimistic updates for better UX",
+      title: 'useOptimistic',
+      description: 'Implement optimistic updates for better UX',
       icon: <Zap className="h-6 w-6 text-yellow-500" />,
-      link: "/features/optimistic",
-      isComingSoon: true
+      link: '/features/optimistic',
+      isComingSoon: true,
     },
     {
-      title: "Document Model",
-      description: "Explore the new React 19 document model",
+      title: 'Document Model',
+      description: 'Explore the new React 19 document model',
       icon: <Sparkles className="h-6 w-6 text-purple-500" />,
-      link: "/features/document-model",
-      isComingSoon: true
-    }
+      link: '/features/document-model',
+      isComingSoon: true,
+    },
   ];
 
   return (
@@ -80,7 +87,8 @@ const LandingPage = () => {
           React 19 Features Playground
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Explore and learn about the latest features in React 19 through interactive examples and comprehensive demonstrations.
+          Explore and learn about the latest features in React 19 through
+          interactive examples and comprehensive demonstrations.
         </p>
       </div>
 
@@ -97,7 +105,8 @@ const LandingPage = () => {
           Ready to Get Started?
         </h2>
         <p className="text-gray-600 mb-6">
-          Begin your journey with React 19 by exploring our interactive demos and examples.
+          Begin your journey with React 19 by exploring our interactive demos
+          and examples.
         </p>
         <Link to="/features/use-hook">
           <Button size="lg">
